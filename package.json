@@ -7,10 +7,16 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "storybook:build": "turbo run storybook:build"
+    "storybook:build": "turbo run storybook:build",
+    "prepare": "husky",
+    "commit": "cz"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19",
+    "@commitlint/config-conventional": "^19",
     "@eslint/js": "^9.39.1",
+    "commitizen": "^4",
+    "cz-conventional-changelog": "^3",
     "eslint": "^9",
     "eslint-config-next": "^16.1.6",
     "eslint-config-prettier": "^10.1.1",
@@ -19,6 +25,7 @@
     "eslint-plugin-react-native": "^5.0.0",
     "eslint-plugin-security": "^3.0.1",
     "globals": "^16.5.0",
+    "husky": "^9",
     "prettier": "^3.7.4",
     "turbo": "^2.8.9",
     "typescript": "5.9.2",
@@ -28,6 +35,11 @@
   "pnpm": {
     "overrides": {
       "esbuild": "0.25.12"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
     }
   },
   "engines": {

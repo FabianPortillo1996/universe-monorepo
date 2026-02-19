@@ -15,7 +15,8 @@
       "Bash(pnpm --filter web build:*)",
       "Bash(pnpm --filter @repo/ui build:*)",
       "Bash(pnpm --filter docs-web build:*)",
-      "Bash(pnpm storybook:build:*)"
+      "Bash(pnpm storybook:build:*)",
+      "Bash(pnpm commitlint:*)"
     ]
   },
   "enabledPlugins": {
