@@ -1,2 +1,2 @@
-export { Button } from './atoms'
-export type { ButtonProps } from './atoms'
+export { Button } from "./atoms";
+export type { ButtonProps } from "./atoms";

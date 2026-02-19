@@ -1,5 +1,5 @@
-import type { Preview } from '@storybook/react-vite'
-import '../tailwind.css'
+import type { Preview } from "@storybook/react-vite";
+import "../tailwind.css";
 
 const preview: Preview = {
   parameters: {
@@ -10,6 +10,6 @@ const preview: Preview = {
       },
     },
   },
-}
+};
 
-export default preview
+export default preview;
