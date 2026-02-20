@@ -1,4 +1,3 @@
-pnpm format
 pnpm check-types
 pnpm lint
 pnpm build
