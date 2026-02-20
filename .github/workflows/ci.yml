@@ -152,7 +152,7 @@ jobs:
           key: modules-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: Install Playwright Chromium
-        run: pnpm exec playwright install chromium --with-deps
+        run: pnpm --filter docs-web exec playwright install chromium --with-deps
 
       - name: Run tests
         run: pnpm test
