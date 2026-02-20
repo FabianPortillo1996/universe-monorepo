@@ -16,7 +16,7 @@ describe("RootLayout", () => {
     render(
       <RootLayout>
         <p>Test child content</p>
-      </RootLayout>
+      </RootLayout>,
     );
 
     expect(screen.getByText("Test child content")).toBeInTheDocument();
@@ -27,7 +27,7 @@ describe("RootLayout", () => {
       <RootLayout>
         <p>First child</p>
         <p>Second child</p>
-      </RootLayout>
+      </RootLayout>,
     );
 
     expect(screen.getByText("First child")).toBeInTheDocument();
@@ -38,7 +38,7 @@ describe("RootLayout", () => {
     render(
       <RootLayout>
         <></>
-      </RootLayout>
+      </RootLayout>,
     );
 
     expect(document.body).toBeInTheDocument();

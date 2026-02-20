@@ -17,7 +17,7 @@ describe("Home page", () => {
     const deployLink = screen.getByRole("link", { name: /deploy now/i });
     expect(deployLink).toHaveAttribute(
       "href",
-      expect.stringContaining("vercel.com/new/clone")
+      expect.stringContaining("vercel.com/new/clone"),
     );
   });
 
@@ -27,7 +27,7 @@ describe("Home page", () => {
     const docsLink = screen.getByRole("link", { name: /read our docs/i });
     expect(docsLink).toHaveAttribute(
       "href",
-      expect.stringContaining("turborepo.dev/docs")
+      expect.stringContaining("turborepo.dev/docs"),
     );
   });
 
@@ -37,7 +37,7 @@ describe("Home page", () => {
     const examplesLink = screen.getByRole("link", { name: /examples/i });
     expect(examplesLink).toHaveAttribute(
       "href",
-      expect.stringContaining("vercel.com/templates")
+      expect.stringContaining("vercel.com/templates"),
     );
   });
 
@@ -49,7 +49,7 @@ describe("Home page", () => {
     });
     expect(turborepoLink).toHaveAttribute(
       "href",
-      expect.stringContaining("turborepo.dev")
+      expect.stringContaining("turborepo.dev"),
     );
   });
 
