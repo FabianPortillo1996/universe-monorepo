@@ -129,13 +129,13 @@ universe-monorepo
 
 Turbo caches outputs and intelligently re-runs tasks based on dependencies:
 
-| Task | Cached | Dependencies | Files |
-|------|--------|--------------|-------|
-| `build` | ✓ | Runs after `^build` | `.next/**`, `dist/**` |
-| `dev` | ✗ | None | (persistent, no cache) |
-| `lint` | ✓ | Runs after `^lint` | (default inputs) |
-| `check-types` | ✓ | Runs after `^check-types` | (default inputs) |
-| `storybook:build` | ✓ | None | `storybook-static/**` |
+| Task              | Cached | Dependencies              | Files                  |
+| ----------------- | ------ | ------------------------- | ---------------------- |
+| `build`           | ✓      | Runs after `^build`       | `.next/**`, `dist/**`  |
+| `dev`             | ✗      | None                      | (persistent, no cache) |
+| `lint`            | ✓      | Runs after `^lint`        | (default inputs)       |
+| `check-types`     | ✓      | Runs after `^check-types` | (default inputs)       |
+| `storybook:build` | ✓      | None                      | `storybook-static/**`  |
 
 Configuration: See `turbo.json`
 
@@ -193,6 +193,7 @@ pnpm lint -- --fix
 ```
 
 **Rules include:**
+
 - TypeScript best practices
 - Import ordering and validation
 - React hooks rules
@@ -288,6 +289,7 @@ All commits must follow [Conventional Commits](https://www.conventionalcommits.o
 **Types:** `feat`, `fix`, `chore`, `docs`, `style`, `refactor`, `perf`, `test`
 
 **Examples:**
+
 ```bash
 feat(ui): add Button component
 fix(web): resolve navigation bug
