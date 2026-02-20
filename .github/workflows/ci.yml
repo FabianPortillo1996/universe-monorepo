@@ -19,18 +19,18 @@ jobs:
     name: Install
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version: 22
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
 
-      - uses: actions/cache/save@v5
+      - uses: actions/cache/save@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: |
             node_modules
@@ -43,15 +43,15 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version: 22
 
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: |
             node_modules
@@ -67,15 +67,15 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version: 22
 
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: |
             node_modules
@@ -90,15 +90,15 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version: 22
 
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: |
             node_modules
@@ -113,15 +113,15 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version: 22
 
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: |
             node_modules
@@ -136,15 +136,15 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version: 22
 
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: |
             node_modules
@@ -159,15 +159,15 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version: 22
 
-      - uses: actions/cache/restore@v5
+      - uses: actions/cache/restore@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: |
             node_modules
@@ -183,7 +183,7 @@ jobs:
 
       - name: Upload coverage
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: coverage-report
           path: apps/docs-web/coverage/
@@ -194,13 +194,13 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version: 22
           cache: pnpm
