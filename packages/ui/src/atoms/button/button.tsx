@@ -8,7 +8,7 @@ export function Button({
   size = "md",
   className,
   ...props
-}: ButtonProps) {
+}: Readonly<ButtonProps>) {
   return (
     <button
       type="button"
