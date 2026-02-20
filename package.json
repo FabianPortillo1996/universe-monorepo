@@ -12,31 +12,27 @@
     "commit": "cz"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19",
-    "@commitlint/config-conventional": "^19",
-    "@eslint/js": "^9.39.1",
-    "commitizen": "^4",
-    "cz-conventional-changelog": "^3",
-    "eslint": "^9",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@eslint/js": "^9.39.3",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.39.3",
     "eslint-config-next": "^16.1.6",
-    "eslint-config-prettier": "^10.1.1",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-native": "^5.0.0",
-    "eslint-plugin-security": "^3.0.1",
-    "globals": "^16.5.0",
-    "husky": "^9",
-    "prettier": "^3.7.4",
-    "turbo": "^2.8.9",
-    "typescript": "5.9.2",
-    "typescript-eslint": "^8.50.0"
+    "eslint-plugin-security": "^4.0.0",
+    "globals": "^17.3.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.1",
+    "turbo": "^2.8.10",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.56.0"
   },
   "packageManager": "pnpm@9.0.0",
-  "pnpm": {
-    "overrides": {
-      "esbuild": "0.25.12"
-    }
-  },
+  "pnpm": {},
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"

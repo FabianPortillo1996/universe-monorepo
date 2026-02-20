@@ -1,0 +1,66 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deploy-web:
+    name: Deploy Web
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm turbo run build --filter=web
+        env:
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+          TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
+      # Uncomment and configure your deployment target:
+      #
+      # Vercel:
+      #   - uses: amondnet/vercel-action@v25
+      #     with:
+      #       vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #       vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      #       vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+      #       vercel-args: --prod
+
+  deploy-storybook:
+    name: Publish Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: apps/docs-web
+          autoAcceptChanges: true
+          onlyChanged: false
