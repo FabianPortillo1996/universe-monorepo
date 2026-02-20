@@ -15,8 +15,8 @@ const config: StorybookConfig = {
     "@storybook/addon-vitest",
     "@storybook/addon-a11y",
     "@chromatic-com/storybook",
-    "@storybook/addon-docs"
-  ]
+    "@storybook/addon-docs",
+  ],
 };
 
 export default config;

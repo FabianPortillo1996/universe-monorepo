@@ -2,7 +2,7 @@ import path from 'node:path'
 
 import config from '@repo/eslint-config/next'
 
-export default [
+const eslintConfig = [
   ...config,
   {
     settings: {
@@ -12,3 +12,5 @@ export default [
     },
   },
 ]
+
+export default eslintConfig

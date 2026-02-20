@@ -7,13 +7,11 @@ type Props = Omit<ImageProps, "src"> & {
   srcDark: string;
 };
 
-const ThemeImage = (props: Props) => {
-  const { srcLight, srcDark, ...rest } = props;
-
+const ThemeImage = ({ srcLight, srcDark, alt, ...rest }: Props) => {
   return (
     <>
-      <Image {...rest} src={srcLight} className="imgLight" />
-      <Image {...rest} src={srcDark} className="imgDark" />
+      <Image {...rest} src={srcLight} alt={alt} className="imgLight" />
+      <Image {...rest} src={srcDark} alt={alt} className="imgDark" />
     </>
   );
 };
