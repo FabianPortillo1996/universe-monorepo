@@ -73,6 +73,13 @@ export default [
   },
 
   {
+    files: ['**/*.test.stories.{ts,tsx}'],
+    rules: {
+      'sonarjs/no-empty-test-file': 'off',
+    },
+  },
+
+  {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       sourceType: 'module',
