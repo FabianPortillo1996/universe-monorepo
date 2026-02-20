@@ -13,7 +13,14 @@
     "check-types": {
       "dependsOn": ["^check-types"]
     },
-    "storybook:build": {
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "src/**", ".storybook/**"],
+      "outputs": ["coverage/**"]
+    },
+    "format:check": {},
+    "build-storybook": {
+      "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", "src/**", ".storybook/**"],
       "outputs": ["storybook-static/**"]
     },

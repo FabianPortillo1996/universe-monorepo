@@ -8,8 +8,10 @@
     "build": "storybook build",
     "lint": "eslint --max-warnings 0",
     "check-types": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_3ce1a4866ab9d61"
+    "chromatic": "npx chromatic"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",

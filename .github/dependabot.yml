@@ -1,0 +1,34 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      storybook:
+        patterns:
+          - "@storybook/*"
+          - "@chromatic-com/*"
+          - chromatic
+          - storybook
+      vitest:
+        patterns:
+          - vitest
+          - "@vitest/*"
+      eslint:
+        patterns:
+          - eslint*
+          - "@eslint/*"
+          - typescript-eslint
+      react:
+        patterns:
+          - react
+          - react-dom
+          - "@types/react*"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
