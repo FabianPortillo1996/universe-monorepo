@@ -31,7 +31,7 @@
     "@vitest/coverage-v8": "^4.0.18",
     "eslint": "^9.39.3",
     "jsdom": "^26.1.0",
-    "tailwindcss": "^4.2.0",
+    "tailwindcss": "^4.2.1",
     "typescript": "5.9.3",
     "vitest": "^4.0.18"
   }
